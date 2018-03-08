@@ -3,7 +3,25 @@ import { NavLink, Link } from 'react-router-dom';
 
 export class NavMenu extends React.Component<{}, {}> {
     public render() {
-        return <div className='main-nav'>
+        return <div className="header-content clearfix">
+            <a className="logo img-logo-main" href="#home"><img src="~/../dist/images/VT-RedLogo-v4a-sm.png" alt="Vital Text Systems" /></a>
+            <nav className="navigation" role="navigation">
+                <ul className="primary-nav">
+                    <li><a href="#services">About</a></li>                    
+                    <NavLink to={'/tryit'} activeClassName='active'>
+                        Try It
+                    </NavLink>
+                    <li><a href="#teams">Our Team</a></li>
+                    <li><a href="#testimonials">Testimonials</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <a href="#" className="nav-toggle">Menu<span></span></a>
+        </div>;
+        
+    }
+        
+        /* <div className='main-nav'>
                 <div className='navbar navbar-inverse'>
                 <div className='navbar-header'>
                     <button type='button' className='navbar-toggle' data-toggle='collapse' data-target='.navbar-collapse'>
@@ -35,6 +53,5 @@ export class NavMenu extends React.Component<{}, {}> {
                     </ul>
                 </div>
             </div>
-        </div>;
-    }
+        </div>;*/
 }
